@@ -1,0 +1,15 @@
+{
+  "name": "electron",
+  "productName": "Design 1",
+  "version": "1.0.0",
+  "description": "frontend prototype",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Anubhav Gupta",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^22.0.0"
+  }
+}

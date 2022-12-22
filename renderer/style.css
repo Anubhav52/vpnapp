@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+
+  color: white;
+  background-image: url(https://images.pexels.com/photos/41949/earth-earth-at-night-night-lights-41949.jpeg?cs=srgb&dl=pexels-pixabay-41949.jpg&fm=jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.menu {
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+aside {
+  position: fixed;
+  right: 0;
+  width: 320px;
+  background: #150e52;
+  padding: 30px;
+  z-index: 100;
+  height: 100vh;
+  transform: translateX(400px);
+}
+
+aside.active {
+  position: fixed;
+  right: 0;
+  width: 320px;
+  background: #150e52;
+  padding: 30px;
+  z-index: 100;
+  height: 100vh;
+  transform: translateX(0px);
+}
+
+aside span {
+  width: 100%;
+}
+
+.close {
+  font-size: 24px;
+  color: white;
+  border: 0;
+  background-color: transparent;
+}
+
+img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(35, 26, 102, 0.4);
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  margin: auto;
+  padding: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 60px;
+}
+
+.slider {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.switch input {
+  display: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-color: #27ff3d;
+}
+
+input:checked + .slider:before {
+  transform: translateX(50px);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box:not(:last-child) {
+  border-right: 1px solid grey;
+}
+
+.boxy {
+  width: 70%;
+  margin-top: 10px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  border-radius: 10px;
+  background-color: rgba(43, 52, 87, 0.8);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.circ {
+  display: flex;
+  height: 50px;
+  width: 50px;
+}
+
+.cir {
+  display: inline-block;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.change {
+  font-weight: 500;
+  border: 1.5px solid white;
+  padding: 15px;
+  border-radius: 30px;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.list {
+  border: 2px solid white;
+  background: #150e52;
+  opacity: 0.9;
+  padding: 20px;
+  width: 20%;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 180px;
+  right: 60px;
+  display: none;
+  z-index: 100;
+}
+
+.list.active {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.btn-green {
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#server-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.r1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

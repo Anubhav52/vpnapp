@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="cover"></div>
+      <div class="menu" id="menu">Menu</div>
+      <aside class="aside">
+        <button class="close">&times;</button>
+        <span
+          id="server-list-span-fastest"
+          class="server-list-span"
+          style="-webkit-app-region: no-drag"
+          >FASTEST SERVER
+          <span
+            style="color: gold; font-size: 18px; vertical-align: middle"
+            title="This is the fastest server for you based on a ping test sent out to all VPN servers from your location!"
+            >ⓘ</span
+          >
+        </span>
+        <ul
+          id="fastest-server"
+          style="list-style-type: none; padding: 0; margin: 0"
+        >
+          <li>dsfjedfj</li>
+          <li>dsfjedfj</li>
+          <li>dsfjedfj</li>
+        </ul>
+        <span id="server-list-span-all" class="server-list-span"
+          >ALL LOCATIONS</span
+        >
+        <div
+          id="server-list-div"
+          style="
+            margin: 0;
+            width: 100%;
+            position: fixed;
+            top: 148px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #db450e;
+            -webkit-app-region: drag;
+          "
+        >
+          <div
+            style="
+              overflow-x: hidden;
+              overflow: overlay;
+              overflow-y: auto;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              -webkit-app-region: no-drag;
+            "
+          >
+            <!-- This list is populated dynamically from javascript -->
+            <ul id="server-list">
+              <li>
+                <a href="#">
+                  <span class="flag-icon flag-icon-au"></span> Australia
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="flag-icon flag-icon-fi"></span> Finland
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="flag-icon flag-icon-nl"></span> Netherlands
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div class="container">
+        <div id="login-form" style="display: none">
+          <form>
+            <div class="form-text">
+              <input
+                type="text"
+                id="username-input"
+                placeholder="Enter username"
+              />
+            </div>
+            <div class="form-text">
+              <input
+                type="password"
+                id="password-input"
+                placeholder="Password"
+              />
+            </div>
+            <div
+              id="auth-status"
+              style="color: white; font-size: 14px; font-style: italic"
+            ></div>
+            <button type="submit" id="login-btn" class="btn-green">
+              Login
+            </button>
+          </form>
+        </div>
+        <div id="server-info">
+          <h1 style="margin: 10px">Your Privacy is Protected</h1>
+          <h3 style="margin: 10px">Connection is encrypted</h3>
+
+          <div class="row">
+            <div
+              id="country-name"
+              style="margin-top: 10px; font-size: 30px; color: white"
+            ></div>
+            <label class="switch" id="connect-btn">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+            <div
+              id="server-name"
+              style="
+                margin-top: 10px;
+                font-weight: 700;
+                font-size: 35px;
+                color: white;
+              "
+            ></div>
+          </div>
+
+          <div
+            id="server-extra"
+            style="
+              margin-top: 10px;
+              font-weight: 100;
+              font-size: 14px;
+              color: white;
+              white-space: nowrap;
+            "
+          >
+            &nbsp;
+          </div>
+
+          <div class="info">
+            <div class="r1">
+              <div class="box counters">
+                <h3>Your ip address is hidden:</h3>
+                <h4 id="ip">-</h4>
+              </div>
+              <div class="box counters">
+                <h3>Uptime:</h3>
+                <h4 id="uptime">-</h4>
+              </div>
+              <div class="box counters">
+                <h3>Status:</h3>
+                <h4 id="status">disconnected</h4>
+              </div>
+            </div>
+            <div class="r1">
+              <div class="box counters">
+                <h3>Sent:</h3>
+                <h4 id="sent">-</h4>
+              </div>
+              <div class="box counters">
+                <h3>Received:</h3>
+                <h4 id="received">-</h4>
+              </div>
+            </div>
+          </div>
+
+          <h1 style="font-size: 22px">Your location now appears as:</h1>
+          <div class="boxy">
+            <div class="circ">
+              <div class="cir"></div>
+            </div>
+            <h1 id="country-name"></h1>
+            <div class="change">CHANGE</div>
+          </div>
+          <div class="list">
+            <ul>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+              <li>India</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
