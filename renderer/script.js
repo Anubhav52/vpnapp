@@ -35,3 +35,14 @@ document.querySelector(".change").onclick = (e) => {
     flag = 0;
   }
 };
+
+let list = document.querySelectorAll(".server-list-span");
+for (let i = 0; i < list.length; i++) {
+  list[i].onclick = function () {
+    let j = 0;
+    while (j < list.length) {
+      list[j++].className = "server-list-span";
+    }
+    list[i].className = "server-list-span active";
+  };
+}

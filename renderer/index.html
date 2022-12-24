@@ -10,80 +10,90 @@
   </head>
   <body>
     <div class="main">
+      <div class="backdrop"></div>
       <div class="cover"></div>
       <div class="menu" id="menu">Menu</div>
       <aside class="aside">
-        <button class="close">&times;</button>
-        <span
-          id="server-list-span-fastest"
-          class="server-list-span"
-          style="-webkit-app-region: no-drag"
-          >FASTEST SERVER
-          <span
-            style="color: gold; font-size: 18px; vertical-align: middle"
-            title="This is the fastest server for you based on a ping test sent out to all VPN servers from your location!"
-            >ⓘ</span
-          >
-        </span>
-        <ul
-          id="fastest-server"
-          style="list-style-type: none; padding: 0; margin: 0"
-        >
-          <li>dsfjedfj</li>
-          <li>dsfjedfj</li>
-          <li>dsfjedfj</li>
-        </ul>
-        <span id="server-list-span-all" class="server-list-span"
-          >ALL LOCATIONS</span
-        >
-        <div
-          id="server-list-div"
-          style="
-            margin: 0;
-            width: 100%;
-            position: fixed;
-            top: 148px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: #db450e;
-            -webkit-app-region: drag;
-          "
-        >
-          <div
-            style="
-              overflow-x: hidden;
-              overflow: overlay;
-              overflow-y: auto;
-              position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              -webkit-app-region: no-drag;
-            "
-          >
-            <!-- This list is populated dynamically from javascript -->
-            <ul id="server-list">
-              <li>
-                <a href="#">
-                  <span class="flag-icon flag-icon-au"></span> Australia
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="flag-icon flag-icon-fi"></span> Finland
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="flag-icon flag-icon-nl"></span> Netherlands
-                </a>
-              </li>
+        <div class="backdrop1"></div>
+        <div style="display: flex; align-items: center">
+          <button class="close" style="font-size: 35px; cursor: pointer">
+            &times;
+          </button>
+          <h2 style="font-size: 18px; margin-left: 10px">CLOSE</h2>
+        </div>
+
+        <div class="row2">
+          <div class="col">
+            <span
+              id="server-list-span-fastest"
+              class="server-list-span active"
+              style="-webkit-app-region: no-drag"
+              >FASTEST SERVER
+            </span>
+            <span id="server-list-span-all" class="server-list-span"
+              >ALL LOCATIONS</span
+            >
+          </div>
+          <div class="col2">
+            <ul
+              id="fastest-server"
+              style="list-style-type: none; padding: 0; margin: 0"
+            >
+              <li>dsfjedfj</li>
+              <li>dsfjedfj</li>
+              <li>dsfjedfj</li>
             </ul>
+
+            <div
+              id="server-list-div"
+              style="
+                margin: 0;
+                width: 100%;
+                position: fixed;
+                top: 148px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                -webkit-app-region: drag;
+              "
+            >
+              <div
+                style="
+                  overflow-x: hidden;
+                  overflow: overlay;
+                  overflow-y: auto;
+                  position: absolute;
+                  top: 0;
+                  bottom: 0;
+                  left: 0;
+                  right: 0;
+                  -webkit-app-region: no-drag;
+                "
+              >
+                <!-- This list is populated dynamically from javascript -->
+                <ul id="server-list">
+                  <li>
+                    <a href="#">
+                      <span class="flag-icon flag-icon-au"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="flag-icon flag-icon-fi"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span class="flag-icon flag-icon-nl"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </aside>
+
       <div class="container">
         <div id="login-form" style="display: none">
           <form>
@@ -117,21 +127,31 @@
           <div class="row">
             <div
               id="country-name"
-              style="margin-top: 10px; font-size: 30px; color: white"
-            ></div>
-            <label class="switch" id="connect-btn">
-              <input type="checkbox" />
-              <span class="slider"></span>
-            </label>
+              style="margin-top: 10px; font-size: 20px; color: white"
+              class="boxy1"
+            >
+              Spain
+            </div>
+
+            <div class="button r" id="connect-btn">
+              <input type="checkbox" class="checkbox" />
+              <div class="knobs"></div>
+              <div class="layer"></div>
+              <div class="off">OFF</div>
+              <div class="on">ON</div>
+            </div>
             <div
               id="server-name"
               style="
                 margin-top: 10px;
                 font-weight: 700;
-                font-size: 35px;
+                font-size: 20px;
                 color: white;
               "
-            ></div>
+              class="boxy1"
+            >
+              Brazil
+            </div>
           </div>
 
           <div
